@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - My Insights & Tutorials{% endblock %}
+
+{% block content %}
+<section class="blog">
+    <h1>Blog</h1>
+    <p class="section-desc">Sharing my journey, tutorials, and insights into the world of web development and AI.</p>
+    
+    <div class="blog-grid">
+        <!-- Blog Post 1: ML -->
+        <article class="blog-post">
+            <img src="{{ url_for('static', filename='images/figure-fig3.png') }}" alt="ML Blog" class="post-image">
+            <div class="post-content">
+                <span class="category-tag">Machine Learning</span>
+                <h2>Getting Started with Sentiment Analysis in Python</h2>
+                <p class="post-meta">February 10, 2026 | 5 min read</p>
+                <p class="post-excerpt">
+                    Dive into the world of NLP! Learn how to build a basic sentiment analysis tool using Python, NLTK, and Scikit-learn. We'll cover data cleaning, tokenization, and model training.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 2: Web Dev -->
+        <article class="blog-post">
+            <img src="{{ url_for('static', filename='images/Overview-of-the-methodology.png') }}" alt="Web Dev Blog" class="post-image">
+            <div class="post-content">
+                <span class="category-tag">Web Development</span>
+                <h2>Why I Chose Flask for My Portfolio</h2>
+                <p class="post-meta">February 5, 2026 | 4 min read</p>
+                <p class="post-excerpt">
+                    Exploring the benefits of Flask for small to medium-sized projects. From its minimalist design to its powerful Jinja2 templating engine, see why it's a great choice for developers.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <!-- Blog Post 3: Career/Skills -->
+        <article class="blog-post">
+            <img src="{{ url_for('static', filename='images/figure-fig4.png') }}" alt="Skills Blog" class="post-image">
+            <div class="post-content">
+                <span class="category-tag">Career</span>
+                <h2>The Importance of SQL in Modern Development</h2>
+                <p class="post-meta">January 28, 2026 | 6 min read</p>
+                <p class="post-excerpt">
+                    Even with the rise of NoSQL, SQL remains a cornerstone of software engineering. Let's discuss why mastering relational databases is crucial for any aspiring Full Stack Developer.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

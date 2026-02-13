@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Profile Picture" class="profile-image">
+        <h1>Welcome to My Portfolio</h1>
+        <p class="lead">Web Developer | Designer | Creative Thinker</p>
+    </div>
+</section>
+
+<section class="highlights">
+    <h2>What I Do</h2>
+    <div class="highlights-grid">
+        <div class="highlight-card">
+            <h3>Web Development</h3>
+            <p>Creating responsive and dynamic web applications</p>
+        </div>
+        <div class="highlight-card">
+            <h3>UI/UX Design</h3>
+            <p>Crafting beautiful and intuitive user interfaces</p>
+        </div>
+        <div class="highlight-card">
+            <h3>Digital Strategy</h3>
+            <p>Helping businesses grow their digital presence</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Shivam Pal, a B.Tech student passionate about creating meaningful digital experiences.
+    I specialize in Python, HTML, CSS, JavaScript, and SQL, and I love building interactive, user-friendly web applications that make a real impact.</p>
+    <p>My ambition is to become a Full Stack Developer, mastering both frontend and backend technologies to craft seamless and scalable web solutions.
+    I’m a problem-solver, a team player, and always eager to learn new technologies to grow as a versatile software engineer.</p>
+</section>
+
+<section id="featured-projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <div class="highlight-card">
+            <img src="{{ url_for('static', filename='images/istockphoto-2206629468-2048x2048.jpg') }}" alt="ML Project" class="project-thumb">
+            <h3>Machine Learning Sentiment Analysis</h3>
+            <p>A ML-powered tool that analyzes text to determine emotional tone using Scikit-learn and NLTK.</p>
+            <a href="{{ url_for('portfolio') }}" class="btn">Learn More</a>
+        </div>
+        <div class="highlight-card">
+            <img src="{{ url_for('static', filename='images/istockphoto-2211224462-2048x2048.jpg') }}" alt="Library System" class="project-thumb">
+            <h3>Library Management System</h3>
+            <p>A comprehensive system for tracking books, members, and transactions using Python and SQL.</p>
+            <a href="{{ url_for('portfolio') }}" class="btn">Learn More</a>
+        </div>
+        <div class="highlight-card">
+            <img src="{{ url_for('static', filename='images/istockphoto-928092672-2048x2048.jpg') }}" alt="Portfolio" class="project-thumb">
+            <h3>Personal Portfolio</h3>
+            <p>This very website! Built with Flask to showcase my skills and projects with a modern design.</p>
+            <a href="{{ url_for('portfolio') }}" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+{% endblock %}
